@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Assessment Tool</title>
+  <!-- Tailwind CSS - Include from CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="container mx-auto p-5 max-w-3xl">
+    <!-- App Wrapper -->
+    <div class="bg-white p-6 rounded-md shadow-lg">
+      <!-- Title -->
+      <h1 class="text-2xl font-bold text-center mb-6">DSA Assessment Tool</h1>
+
+      <!-- Selection Section -->
+      <div>
+        <!-- Complexity Dropdown -->
+        <label for="complexity" class="block text-sm font-semibold mb-2">Select Problem Complexity</label>
+        <select id="complexity" class="w-full border bg-gray-100 p-3 rounded-lg mb-4">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <!-- Problem Type Dropdown -->
+        <label for="problemType" class="block text-sm font-semibold mb-2">Select Problem Type</label>
+        <select id="problemType" class="w-full border bg-gray-100 p-3 rounded-lg mb-4">
+          <option value="arrays">Arrays</option>
+          <option value="linkedlist">Linked List</option>
+          <option value="dp">Dynamic Programming</option>
+          <option value="recursion">Recursion</option>
+          <option value="sorting">Sorting</option>
+          <option value="searching">Searching</option>
+          <option value="greedy">Greedy Algorithm</option>
+        </select>
+
+        <!-- Generate Button -->
+        <button id="generateProblem" class="w-full bg-blue-500 text-white font-semibold py-2 rounded-lg hover:bg-blue-600">
+          Generate Problem
+        </button>
+      </div>
+
+      <!-- Problem Display Section -->
+      <div id="problemSection" class="hidden mt-6 bg-gray-50 p-4 rounded-md border">
+        <h2 class="font-semibold mb-2">Problem Statement:</h2>
+        <p id="problemStatement" class="text-gray-700"></p>
+      </div>
+
+      <!-- Solution Submission Section -->
+      <div id="solutionSection" class="hidden mt-6">
+        <label for="solutionInput" class="block text-sm font-semibold mb-2">Submit Your Solution:</label>
+        <textarea id="solutionInput" class="w-full border bg-gray-100 p-3 rounded-lg" rows="8" placeholder="Write your solution here..."></textarea>
+        <button id="submitSolution" class="w-full bg-green-500 text-white font-semibold py-2 mt-4 rounded-lg hover:bg-green-600">
+          Submit Solution
+        </button>
+      </div>
+
+      <!-- Grades Section -->
+      <div id="gradeSection" class="hidden mt-6 bg-gray-50 p-4 rounded-md border">
+        <h3 class="font-semibold">Assessment Grades:</h3>
+        <p id="gradeResult" class="text-gray-800 mt-2"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>

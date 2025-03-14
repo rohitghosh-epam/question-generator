@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DS-ALGO Assessment Tool</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add this in the <head> or before your <script src="app.js"> -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>DS-ALGO Assessment Tool</h1>
+    
+    <!-- Problem Configuration -->
+    <div class="config">
+      <label for="complexity">Select Complexity:</label>
+      <select id="complexity">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <label for="category">Select Category:</label>
+      <select id="category">
+        <option value="arrays">Arrays</option>
+        <option value="linked_list">Linked List</option>
+        <option value="dp">Dynamic Programming</option>
+        <option value="recursion">Recursion</option>
+        <option value="sorting">Sorting</option>
+        <option value="backtracking">Backtracking</option>
+        <option value="greedy">Greedy</option>
+      </select>
+
+      <button id="generate-problem">Generate Problem</button>
+    </div>
+
+    <section id="hidden">
+
+        <!-- Problem Display -->
+        <div class="problem-display">
+            <h2 id="problem-title">Problem:</h2>
+            <p id="problem-description">Select the complexity and category to get started.</p>
+          </div>
+  
+          <!-- Code Editor -->
+          <div class="code-editor">
+            <h2>Submit Your Solution</h2>
+            <textarea id="solution" placeholder="Write your code here..."></textarea>
+            <button id="submit-solution">Submit</button>
+          </div>
+  
+          <!-- Results -->
+          <div class="results">
+            <h2>Results</h2>
+            <p id="feedback">Submit your solution to get feedback.</p>
+          </div>
+        </div>
+
+    </section>
+ 
+    
+
+  <script src="app.js"></script>
+</body>
+</html>
